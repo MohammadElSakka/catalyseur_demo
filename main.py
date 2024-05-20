@@ -9,11 +9,14 @@ with gr.Blocks() as demo:
     gr.Markdown(
     """
     # Hello World!
-    Start typing below to see the output.
+    Start typing below to see the output and press enter when ready.
     """)
     inp = gr.Textbox(placeholder="What do you want?")
     out = gr.Textbox()
-    inp.change(generate_image_controller, inp, out)
+    inp.submit(welcome, inp, out)
+
+    # gr.Image(generate_image_controller(inp), label="Generated image")
 
 if __name__ == "__main__":
     demo.launch()
+ 

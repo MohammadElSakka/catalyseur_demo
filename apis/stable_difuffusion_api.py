@@ -1,5 +1,6 @@
 import requests
 import io
+import numpy as np
 
 API_URL = "https://api-inference.huggingface.co/models/sd-dreambooth-library/fashion"
 headers = {"Authorization": "Bearer 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"}
@@ -13,4 +14,4 @@ def generate_image_api(inputs):
 		"inputs": inputs,
 	})
 
-	return io.BytesIO(image_bytes)
+	return np.frombuffer(io.BytesIO(image_bytes), dtype=np.float32)
