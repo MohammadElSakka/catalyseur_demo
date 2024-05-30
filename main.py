@@ -13,7 +13,9 @@ with gr.Blocks() as demo:
                             inputs=[user_prompt],
                             outputs=[generated_image, generated_text]
                             )
-    
+    # TODO: Fit the text box next to the image box.
+    # TODO: Add clear bottom for both
+    # TODO: Add different layout colours.
 gr.close_all()
 demo.launch()
 
