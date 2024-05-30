@@ -13,7 +13,7 @@ def generate_add_text(input_):
     
     output = query(
         {
-        'inputs':f"make a advertisement description of this: {input_} ##",
+        'inputs':f"make a advertisement description of this: {input_}",
         'parameters':{
             'return_full_text':False,
             'max_new_tokens' :500
